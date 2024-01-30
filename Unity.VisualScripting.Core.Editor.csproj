@@ -255,8 +255,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Inspection\IndividualEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Plugin\Acknowledgements\Acknowledgement_SQLite.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Inspection\Unity\Ray2DInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Inspection\GraphEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Inspection\Unity\Ray2DInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Windows\Page.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Description\GraphNesterDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Platforms\EditorPlatformUtility.cs" />
@@ -409,8 +409,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Plugin\Changelogs\Changelog_1_4_5.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Analysis\IGraphElementAnalysis.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Inspection\Unity\LayerMaskInspector.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Interface\Colors\SkinnedColor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Interface\Licenses\License.Iconmonstr.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Interface\Colors\SkinnedColor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Inspection\Primitives\LongInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Description\GraphItemDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Utilities\LudiqEditorUtility.cs" />
@@ -803,15 +803,6 @@
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
@@ -820,9 +811,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
