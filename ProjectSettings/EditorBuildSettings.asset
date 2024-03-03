@@ -13,7 +13,10 @@ EditorBuildSettings:
     guid: b77b1c07b5fbc604d822e64a1f7413ed
   - enabled: 1
     path: Assets/Scenes/Floor One.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 2524776a35aa07a47b53f076494b7313
+  - enabled: 1
+    path: Assets/Scenes/SlimeAbyss.unity
+    guid: 24bf8f52ddae3af43be9411b4654214c
   - enabled: 1
     path: Assets/Scenes/Floor Two.unity
     guid: 48d9763741e0cad4c8867aa37647f799
