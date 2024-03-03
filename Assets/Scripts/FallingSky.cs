@@ -31,6 +31,11 @@ public class FallingSky : MonoBehaviour
     IEnumerator Delay(PlayerController player)
     {
         yield return new WaitForSeconds(1f);
-        player.currentHealth = 0;
+        var anim = player.GetComponent<Animator>();
+        anim.SetBool("Falling", false);
+        anim.Play("Player_Idle");
+        player.currentHealth -= 1;
+        player.transform.position = player.savedCheckpoint;
+        StopAllCoroutines();
     }
 }
