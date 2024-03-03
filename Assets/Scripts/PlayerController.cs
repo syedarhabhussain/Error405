@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 6;
     public int health { get { return currentHealth; } }
     public int currentHealth;
+    public Vector3 savedCheckpoint;
     int savedHealth;
     bool isInvincible;
     bool isSprinting;
