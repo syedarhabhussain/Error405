@@ -6,16 +6,21 @@ public class Mimic : MonoBehaviour
 {
 
     public GameObject coinProjectile;
+    Damageable dmg;
     // Start is called before the first frame update
     void Start()
     {
         GoldCoins();
+        dmg = GetComponent<Damageable>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (dmg.currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void CallCoins()
