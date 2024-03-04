@@ -21,4 +21,10 @@ public class GameOverScreen : MonoBehaviour
         PlayerPrefs.DeleteKey("Ability");
         SceneManager.LoadScene(2);
     }
+
+    public void ContinueButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //Debug.Log(SceneManage.GetActiveScene());
+    }
 }
