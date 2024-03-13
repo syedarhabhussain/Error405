@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MimicIdle : StateMachineBehaviour
+public class MimicWaves : StateMachineBehaviour
 {
+    Mimic boss;
     float timer;
-    int rand;
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("CoinAttack");
-        animator.ResetTrigger("Wave");
+        animator.ResetTrigger("Idle");
+        boss = animator.GetComponent<Mimic>();
+        boss.WaveAttack();
         timer = 4f;
-        rand = Random.Range(0, 2);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -21,10 +20,7 @@ public class MimicIdle : StateMachineBehaviour
     {
         if (timer <= 0)
         {
-            if (rand == 1)
-                animator.SetTrigger("CoinAttack");
-            else
-                animator.SetTrigger("Wave");
+            animator.SetTrigger("Idle");
         }
         else
             timer -= Time.deltaTime;

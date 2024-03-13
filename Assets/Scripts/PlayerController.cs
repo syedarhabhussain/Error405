@@ -96,6 +96,8 @@ public class PlayerController : MonoBehaviour
         {
             rolling = true;
             invRolling = true;
+            Physics2D.IgnoreLayerCollision(6,8,true);
+            Physics2D.IgnoreLayerCollision(6,13,true);
             stamina -= 25f;
         }
 
@@ -224,6 +226,8 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         invRolling = false;
         bow.SetActive(true);
+        Physics2D.IgnoreLayerCollision(6, 8, false);
+        Physics2D.IgnoreLayerCollision(6, 13, false);
     }
 
     public void ChangeHealth(int amt)
