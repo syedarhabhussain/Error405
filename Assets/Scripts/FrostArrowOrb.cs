@@ -8,9 +8,12 @@ public class FrostArrowOrb : MonoBehaviour
     PickUpScreen itemScreen;
     GameObject eIndicator;
     string UpgName, desc;
+    [SerializeField] float interactRange = 0.8f;
+    Transform playerT;
     // Start is called before the first frame update
     void Start()
     {
+        playerT = GameObject.FindWithTag("Player").transform;
         itemScreen = GameObject.FindWithTag("Canvas").GetComponent<PickUpScreen>();
         eIndicator = transform.GetChild(0).GetChild(0).gameObject;
         UpgName = "Frost Arrow";
@@ -20,32 +23,30 @@ public class FrostArrowOrb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        PlayerController player = other.gameObject.GetComponent<PlayerController>();
-        Upgrades playerUp = other.gameObject.GetComponent<Upgrades>();
-        if (player != null && Input.GetKeyDown(KeyCode.E))
+        //if player is in range
+        if (Vector2.Distance(transform.position, playerT.position) <= interactRange)
         {
-            itemScreen.Appear(UpgName, desc, icon);
-            StartCoroutine(Decision(playerUp));
+            //set e indicator to be visible
+            eIndicator.SetActive(true);
+
+            //if e is pressed while in range
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //open decision screen
+                itemScreen.Appear(UpgName, desc, icon);
+                StartCoroutine(Decision(GameObject.FindWithTag("Player").GetComponent<Upgrades>()));
+            }
+        }
+        else
+        {
+            eIndicator.SetActive(false);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnDrawGizmos()
     {
-        PlayerController player = other.gameObject.GetComponent<PlayerController>();
-        if (player != null)
-            eIndicator.SetActive(true);
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        PlayerController player = other.gameObject.GetComponent<PlayerController>();
-        if (player != null)
-            eIndicator.SetActive(false);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, interactRange);
     }
 
     IEnumerator Decision(Upgrades playerUp)

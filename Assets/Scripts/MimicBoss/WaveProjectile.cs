@@ -19,4 +19,14 @@ public class WaveProjectile : MonoBehaviour
         //travel
         transform.Translate(new Vector2(0,-1) * 5 * Time.deltaTime/2);
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            player.ChangeHealth(-1);
+        }
+        Destroy(gameObject);
+    }
 }

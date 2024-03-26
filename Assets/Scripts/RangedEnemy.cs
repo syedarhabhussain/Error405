@@ -87,15 +87,6 @@ public class RangedEnemy : MonoBehaviour
     {
         if (Mathf.Abs(direction.x) > 0f)
         {
-            if (aipath.velocity != Vector3.zero)
-            {
-                anim.SetBool("Sprinting", true);
-            }
-            else
-            {
-                anim.SetBool("Sprinting", false);
-            }
-
             if (direction.x > 0f)
             {
                 sprite.flipX = true;

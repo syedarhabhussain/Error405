@@ -51,11 +51,14 @@ public class ExplosiveArrow : MonoBehaviour
         Damageable enemy = other.gameObject.GetComponent<Damageable>();
         if (enemy != null)
         {
-            if (pierceCount == 0)
+            //if arrow hits enemy #1 or #2 generate an explosion
+            if (pierceCount != 2)
             {
-                enemy.ChangeHealth(-1);
+                //enemy.ChangeHealth(-1);
+                Instantiate(explosion, transform.position, transform.rotation);
                 pierceCount++;
-            }   
+            }
+            //if arrow hits enemy #3 generate explosion and destroy arrow
             else
             {
                 Destroy(gameObject);
