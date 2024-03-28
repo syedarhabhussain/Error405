@@ -6,6 +6,7 @@ public class Mimic : MonoBehaviour
 {
 
     public GameObject coinProjectile;
+    public GameObject potionProjectile;
     public GameObject waveProjectile;
     Damageable dmg;
     public int coinAmt = 30;
@@ -34,6 +35,8 @@ public class Mimic : MonoBehaviour
     {
         for(int i=0; i<coinAmt; i++)
         {
+            if (i == coinAmt / 2)
+                Instantiate(potionProjectile, transform.position, Quaternion.identity);
             Instantiate(coinProjectile, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
         }
