@@ -18,7 +18,7 @@ public class FlyingPotion : MonoBehaviour
         // movement = transform.TransformDirection(movement);
         // transform.Translate(movement.normalized * 3 * Time.deltaTime, Space.World);
         transform.Translate(random.normalized * 3 * Time.deltaTime, Space.World);
-        transform.Rotate(Vector3.forward * 30 * Time.deltaTime);
+       // transform.Rotate(Vector3.forward * 30 * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D other)
