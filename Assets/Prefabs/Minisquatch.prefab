@@ -117,7 +117,7 @@ Transform:
   m_Children:
   - {fileID: 1587745118733756141}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2959255500147301125
 SpriteRenderer:
@@ -295,6 +295,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a1f3e8f515d724a4e837dcddb2559998, type: 2}
   - {fileID: 11400000, guid: a8b6c721e62b83745be29070d1696729, type: 2}
   - {fileID: 11400000, guid: 6a4f6f71487f7604184204377053a8a1, type: 2}
+  - {fileID: 11400000, guid: 152e793f8e54a4ee99c77893c04ac14f, type: 2}
   dropForce: 50
 --- !u!114 &2091750409385409958
 MonoBehaviour:
@@ -308,8 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d49457f37c98a40850a37a949fc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  currentHealth: 3
+  maxHealth: 2
+  currentHealth: 2
   healthbar: {fileID: 0}
   isBoss: 0
 --- !u!114 &5803758743027945515

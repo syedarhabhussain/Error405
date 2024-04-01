@@ -79,7 +79,7 @@ Transform:
   - {fileID: 763416010492854040}
   - {fileID: 6704748988462692259}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7403615417696892708
 SpriteRenderer:
@@ -257,8 +257,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d49457f37c98a40850a37a949fc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
-  currentHealth: 2
+  maxHealth: 1
+  currentHealth: 1
+  healthbar: {fileID: 0}
+  isBoss: 0
 --- !u!114 &3302454137245076175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,6 +812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 3970887610884175992}
+  isTower: 0
+  isBoss: 0
 --- !u!225 &8073461857137424415
 CanvasGroup:
   m_ObjectHideFlags: 0

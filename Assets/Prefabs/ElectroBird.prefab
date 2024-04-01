@@ -43,7 +43,7 @@ Transform:
   - {fileID: 2913622274302138749}
   - {fileID: 197994873974452579}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7222721390358027448
 SpriteRenderer:
@@ -188,6 +188,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a8b6c721e62b83745be29070d1696729, type: 2}
   - {fileID: 11400000, guid: 6a4f6f71487f7604184204377053a8a1, type: 2}
   - {fileID: 11400000, guid: e3b13eeb94844d94d840045967ae3925, type: 2}
+  - {fileID: 11400000, guid: 152e793f8e54a4ee99c77893c04ac14f, type: 2}
   dropForce: 50
 --- !u!114 &3428489348690250107
 MonoBehaviour:
@@ -241,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d49457f37c98a40850a37a949fc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
-  currentHealth: 4
+  maxHealth: 3
+  currentHealth: 3
   healthbar: {fileID: 0}
   isBoss: 0
 --- !u!114 &2649961984111825863
@@ -516,6 +517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 9054073932040434295}
   isTower: 0
+  isBoss: 0
 --- !u!225 &3369708929783198502
 CanvasGroup:
   m_ObjectHideFlags: 0

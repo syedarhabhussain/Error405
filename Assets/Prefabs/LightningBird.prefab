@@ -42,7 +42,7 @@ Transform:
   - {fileID: 2197611194246709569}
   - {fileID: 6827746755602653796}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6531243159261273800
 SpriteRenderer:
@@ -187,6 +187,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a8b6c721e62b83745be29070d1696729, type: 2}
   - {fileID: 11400000, guid: 6a4f6f71487f7604184204377053a8a1, type: 2}
   - {fileID: 11400000, guid: e3b13eeb94844d94d840045967ae3925, type: 2}
+  - {fileID: 11400000, guid: 152e793f8e54a4ee99c77893c04ac14f, type: 2}
   dropForce: 50
 --- !u!114 &2563852219565415436
 MonoBehaviour:
@@ -813,6 +814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 3193705703302009340}
   isTower: 0
+  isBoss: 0
 --- !u!225 &4500051784329718430
 CanvasGroup:
   m_ObjectHideFlags: 0
