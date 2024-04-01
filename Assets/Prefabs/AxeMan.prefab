@@ -149,7 +149,7 @@ Transform:
   - {fileID: 4965644108519237267}
   - {fileID: 8966926723457685982}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2204746760965122749
 SpriteRenderer:
@@ -328,8 +328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d49457f37c98a40850a37a949fc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 8
-  currentHealth: 8
+  maxHealth: 5
+  currentHealth: 5
   healthbar: {fileID: 0}
   isBoss: 0
 --- !u!114 &2137314559616979825
