@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealthPotion : MonoBehaviour
 {
+    public bool isFullHeal;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,10 @@ public class HealthPotion : MonoBehaviour
         PlayerController player = other.gameObject.GetComponent<PlayerController>();
         if (player != null)
         {
-            player.ChangeHealth(1);
+            if (isFullHeal)
+                player.ChangeHealth(10);
+            else
+                player.ChangeHealth(1);
             Destroy(gameObject);
         }
         
