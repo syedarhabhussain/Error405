@@ -70,7 +70,7 @@ Transform:
   m_Children:
   - {fileID: 1295194591367209882}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1936574682296504652
 SpriteRenderer:
@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d49457f37c98a40850a37a949fc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  currentHealth: 20
+  maxHealth: 100
+  currentHealth: 100
   healthbar: {fileID: 0}
   isBoss: 1
 --- !u!95 &5718323641820310087
@@ -246,6 +246,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinProjectile: {fileID: 6078839142691758403, guid: e21e61e0f9b53194c9f41f9f00a36771, type: 3}
+  potionProjectile: {fileID: 8333891415409774055, guid: 811c3bef2edecc24cbf711c5847739e0, type: 3}
+  waveProjectile: {fileID: 7016603456948863262, guid: 92f18235a81f94947b30f4fc0c537253, type: 3}
+  warningCircle: {fileID: 1259115055942835182, guid: 03cc194f1f724ab43860238be53cb65b, type: 3}
+  coinAmt: 30
 --- !u!114 &4060664924925782482
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -134,3 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   field: {fileID: 6511108714489066545, guid: 2d6655b54f600374d8ae0c97f012b6db, type: 3}
+  offsetY: 1.75
+  duration: 1

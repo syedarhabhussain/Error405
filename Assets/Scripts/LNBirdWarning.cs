@@ -6,6 +6,9 @@ public class LNBirdWarning : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject field;
+    public float offsetY;
+    public float duration;
+
     void Start()
     {
         StartCoroutine(Lifetime());
@@ -19,8 +22,8 @@ public class LNBirdWarning : MonoBehaviour
 
     IEnumerator Lifetime()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(duration);
         Destroy(gameObject);
-        Instantiate(field, new Vector2(transform.position.x, transform.position.y+1.75f), Quaternion.identity);
+        Instantiate(field, new Vector2(transform.position.x, transform.position.y+offsetY), Quaternion.identity);
     }
 }

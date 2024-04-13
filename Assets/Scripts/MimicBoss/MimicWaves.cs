@@ -6,18 +6,26 @@ public class MimicWaves : StateMachineBehaviour
 {
     Mimic boss;
     float timer;
+    bool fired;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Idle");
         boss = animator.GetComponent<Mimic>();
-        boss.WaveAttack();
-        timer = 4f;
+        boss.RubbleFall();
+        timer = 7f;
+        fired = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (timer < 3 && !fired) 
+        {
+            boss.WaveAttack();
+            fired = true;
+        }
+            
         if (timer <= 0)
         {
             animator.SetTrigger("Idle");

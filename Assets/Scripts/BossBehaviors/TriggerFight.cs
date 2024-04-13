@@ -6,6 +6,7 @@ public class TriggerFight : MonoBehaviour
 {
     public GameObject boss;
     public CanvasGroup bossHealthBar;
+    public Camera cam;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class TriggerFight : MonoBehaviour
         Animator anim = boss.GetComponent<Animator>();
         bossHealthBar.alpha = 1;
         anim.SetTrigger("StartFight");
+        cam.orthographicSize = 8.0f;
     }
 
 }

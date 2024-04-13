@@ -28,6 +28,7 @@ public class FlyingPotion : MonoBehaviour
         {
             player.ChangeHealth(1);  
         }
-        Destroy(gameObject);
+        if(other.gameObject.layer != 11)
+            Destroy(gameObject);
     }
 }
