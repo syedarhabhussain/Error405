@@ -24,7 +24,7 @@ public class MimicIdle : StateMachineBehaviour
             if (rand == 1)
                 animator.SetTrigger("CoinAttack");
             else
-                animator.SetTrigger("Wave");
+                animator.SetTrigger("Rubble");
         }
         else
             timer -= Time.deltaTime;
