@@ -50,15 +50,21 @@ public class Shooting : MonoBehaviour
         {
             chosenArrow = expArrow;
         }
-
-        if(upg.poiArrow)
+        else
         {
-            chosenArrow = poiArrow;
-        }
-
-        if(upg.froArrow)
-        {
-            chosenArrow = froArrow;
+            if(upg.poiArrow)
+            {
+                chosenArrow = poiArrow;
+            }
+            else
+            {
+                if (upg.froArrow)
+                {
+                    chosenArrow = froArrow;
+                }
+                else
+                    chosenArrow = regArrow;
+            }
         }
 
         if(!canFire)

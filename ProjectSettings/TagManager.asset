@@ -32,8 +32,8 @@ TagManager:
   - DestructibleObject
   - Clouds
   - Boss
-  - 
-  - 
+  - SpikeWall
+  - PlayerFeet
   - 
   - 
   - 

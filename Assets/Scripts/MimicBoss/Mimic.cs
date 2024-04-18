@@ -71,15 +71,15 @@ public class Mimic : MonoBehaviour
     {
         for(int i=0; i<2; i++)
         {
-            Instantiate(warningCircle, new Vector2(Random.Range(452, 475), Random.Range(-47, -38)), Quaternion.identity);
+            Instantiate(warningCircle, new Vector2(Random.Range(455, 475), Random.Range(-47, -42)), Quaternion.identity);
         }
     }
-
+    
     void SpawnMinions()
     {
         for(int i=0; i<10; i++)
         {
-            GameObject mob = Instantiate(minions[Random.Range(0, minions.Count)], new Vector2(Random.Range(452, 475), Random.Range(-47, -38)), Quaternion.identity);
+            GameObject mob = Instantiate(minions[Random.Range(0, minions.Count)], new Vector2(Random.Range(452, 475), Random.Range(-47, -42)), Quaternion.identity);
             mob.GetComponent<Pathfinding.AIBase>().canMove = true;
         }
     }

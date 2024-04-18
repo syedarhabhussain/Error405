@@ -23,9 +23,10 @@ public class Portal : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         PlayerController player = other.gameObject.GetComponent<PlayerController>();
-        Upgrades upg = player.GetComponent<Upgrades>();
+        
         if (player != null && enemies.transform.childCount == 0)
         {
+            Upgrades upg = player.GetComponent<Upgrades>();
             PlayerPrefs.SetString("Ability", upg.ability);
             PlayerPrefs.SetString("Arrow", upg.arrow);
             PlayerPrefs.SetInt("Health", player.currentHealth);

@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour
         Damageable enemy = other.gameObject.GetComponent<Damageable>();
         if (enemy != null)
         {
-            enemy.ChangeHealth(-1);
+            enemy.ChangeHealth(-1, "reg");
         }
         Destroy(gameObject);
     }
@@ -56,7 +56,7 @@ public class Projectile : MonoBehaviour
         // if hit is enemy
         if (enemy != null)
         {
-            enemy.ChangeHealth(-1);
+            enemy.ChangeHealth(-1, "reg");
             if (pierceCount == 0)
                 pierceCount++;
             else

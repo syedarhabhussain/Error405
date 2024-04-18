@@ -14,7 +14,7 @@ public class PlayerExplosion : MonoBehaviour
         Damageable enemy = other.gameObject.GetComponent<Damageable>();
         if (enemy != null)
         {
-            enemy.ChangeHealth(-1);
+            enemy.ChangeHealth(-1, "explosion");
         }
     }
 

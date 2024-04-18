@@ -640,6 +640,9 @@ MonoBehaviour:
   currentHealth: 2
   healthbar: {fileID: 0}
   isBoss: 0
+  poiRes: 0
+  expRes: 1
+  froRes: 0
 --- !u!114 &1189247949031177198
 MonoBehaviour:
   m_ObjectHideFlags: 0

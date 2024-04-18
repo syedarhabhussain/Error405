@@ -10,6 +10,8 @@ public class Upgrades : MonoBehaviour
     public Sprite expIcon;
     public Sprite poiIcon;
     public Sprite froIcon;
+    public Sprite emptyIcon;
+
     public bool multiShot = false;
     public bool pierceShot = false;
     public bool expArrow = false;
@@ -37,12 +39,32 @@ public class Upgrades : MonoBehaviour
             setPoiArrow(poiIcon);
         if (arrow == "FroArrow")
             setFroArrow(froIcon);
+        if (arrow == "empty")
+            resetArrow();
+        if (ability == "empty")
+            resetAbility();
+            
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void resetArrow()
+    {
+        arrow = "empty";
+        poiArrow = false;
+        froArrow = false;
+        expArrow = false;
+    }
+
+    public void resetAbility()
+    {
+        ability = "empty";
+        pierceShot = false;
+        multiShot = false;
     }
 
     public void setPierceShot(Sprite icon)

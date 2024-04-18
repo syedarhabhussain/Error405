@@ -12,6 +12,8 @@ public class Damageable : MonoBehaviour
     bool icy;
     public bool isBoss;
 
+    public bool poiRes, expRes, froRes;
+
     Pathfinding.AIBase ai;
     // Start is called before the first frame update
     void Start()
@@ -31,10 +33,13 @@ public class Damageable : MonoBehaviour
         
     }
 
-    public void ChangeHealth(float amt)
+    public void ChangeHealth(float amt, string damType)
     {
         if(!isBoss)
             ai.canMove = true;
+        if ((poiRes && damType == "poison") || (expRes && damType == "explosion") || (froRes && damType == "frost")) { 
+            amt /= 2;
+        }
         currentHealth = Mathf.Clamp(currentHealth + amt, 0, maxHealth);
         healthbar.UpdateHealthbar(currentHealth, maxHealth);
     }
@@ -52,13 +57,13 @@ public class Damageable : MonoBehaviour
     {
         SpriteRenderer rend = GetComponent<SpriteRenderer>();
         yield return new WaitForSeconds(1.5f);
-        ChangeHealth(-0.5f);
+        ChangeHealth(-0.5f, "poison");
         rend.color = Color.green;
         yield return new WaitForSeconds(0.25f);
         rend.color = Color.white;
 
         yield return new WaitForSeconds(2f);
-        ChangeHealth(-0.5f);
+        ChangeHealth(-0.5f, "poison");
         rend.color = Color.green;
         yield return new WaitForSeconds(0.25f);
         rend.color = Color.white;

@@ -43,7 +43,7 @@ public class PoisonArrow : MonoBehaviour
         Damageable enemy = other.gameObject.GetComponent<Damageable>();
         if (enemy != null)
         {
-            enemy.ChangeHealth(-1);
+            enemy.ChangeHealth(-1, "poison");
             enemy.setPoison();
         }
         Destroy(gameObject);
@@ -55,7 +55,7 @@ public class PoisonArrow : MonoBehaviour
         Damageable enemy = other.gameObject.GetComponent<Damageable>();
         if (enemy != null)
         {
-            enemy.ChangeHealth(-1);
+            enemy.ChangeHealth(-1, "poison");
             enemy.setPoison();
             if (pierceCount == 0)
                 pierceCount++;

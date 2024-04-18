@@ -43,7 +43,7 @@ public class FrostArrow : MonoBehaviour
         Damageable enemy = other.gameObject.GetComponent<Damageable>();
         if (enemy != null)
         {
-            enemy.ChangeHealth(-1);
+            enemy.ChangeHealth(-1, "frost");
             enemy.setFrost();
         }
         Destroy(gameObject);
@@ -55,7 +55,7 @@ public class FrostArrow : MonoBehaviour
         Damageable enemy = other.gameObject.GetComponent<Damageable>();
         if (enemy != null)
         {
-            enemy.ChangeHealth(-1);
+            enemy.ChangeHealth(-1, "frost");
             enemy.setFrost();
             if (pierceCount == 0)
                 pierceCount++;
