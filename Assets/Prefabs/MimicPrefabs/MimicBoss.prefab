@@ -65,7 +65,7 @@ Transform:
   m_GameObject: {fileID: 3968252763960500566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 161, y: -45, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1295194591367209882}
@@ -112,8 +112,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1475850309
   m_SortingLayer: 3
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -8236885274497555391, guid: 1099dde65d55b774bbd2a3a96fac285b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -140,6 +140,9 @@ MonoBehaviour:
   currentHealth: 100
   healthbar: {fileID: 0}
   isBoss: 1
+  poiRes: 0
+  expRes: 0
+  froRes: 0
 --- !u!95 &5718323641820310087
 Animator:
   serializedVersion: 5
@@ -220,18 +223,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.000000007450581}
+  m_Offset: {x: -0.007612109, y: 0.0018743873}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1.0625, y: 0.8125}
     newSize: {x: 4.25, y: 5.4166665}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15, y: 0.15}
+  m_Size: {x: 1.0872314, y: 0.83568645}
   m_EdgeRadius: 0
 --- !u!114 &8422525922156405558
 MonoBehaviour:
@@ -250,6 +253,12 @@ MonoBehaviour:
   waveProjectile: {fileID: 7016603456948863262, guid: 92f18235a81f94947b30f4fc0c537253, type: 3}
   warningCircle: {fileID: 1259115055942835182, guid: 03cc194f1f724ab43860238be53cb65b, type: 3}
   coinAmt: 30
+  minions:
+  - {fileID: 7120535005975506295, guid: 04f2c932201c2ba4ea1447a837ce777d, type: 3}
+  - {fileID: 8504120346851700762, guid: d234973b94115f243be7cfefb04e7f88, type: 3}
+  - {fileID: 7430739708165479494, guid: 6cf43e1f3bc47b84d91537cd6e2e2900, type: 3}
+  spawn1: 0
+  spawn2: 0
 --- !u!114 &4060664924925782482
 MonoBehaviour:
   m_ObjectHideFlags: 0

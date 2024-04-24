@@ -77,9 +77,16 @@ public class Mimic : MonoBehaviour
     
     void SpawnMinions()
     {
-        for(int i=0; i<10; i++)
+        //Little slimes
+        for(int i=0; i<8; i++)
         {
-            GameObject mob = Instantiate(minions[Random.Range(0, minions.Count)], new Vector2(Random.Range(452, 475), Random.Range(-47, -42)), Quaternion.identity);
+            GameObject mob = Instantiate(minions[Random.Range(1, minions.Count)], new Vector2(Random.Range(453, 475), Random.Range(-47, -42)), Quaternion.identity);
+            mob.GetComponent<Pathfinding.AIBase>().canMove = true;
+        }
+        //Big slime
+        for (int i = 0; i < 2; i++)
+        {
+            GameObject mob = Instantiate(minions[0], new Vector2(Random.Range(453, 475), Random.Range(-47, -42)), Quaternion.identity);
             mob.GetComponent<Pathfinding.AIBase>().canMove = true;
         }
     }
