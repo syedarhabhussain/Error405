@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 7452217123503255725}
   m_Layer: 8
   m_Name: LargeAxeman
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d8606502d63604a86987aa305cacbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPot: {fileID: 1693429941880994870, guid: b4ca6ab49648add4b94448512f7f7266, type: 3}
   attackRange: 7
   detectRange: 10
 --- !u!95 &2801628640814038144
@@ -644,10 +645,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d49457f37c98a40850a37a949fc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  currentHealth: 20
+  maxHealth: 25
+  currentHealth: 25
   healthbar: {fileID: 0}
   isBoss: 0
+  poiRes: 0
+  expRes: 0
+  froRes: 0
 --- !u!114 &8769999661219695962
 MonoBehaviour:
   m_ObjectHideFlags: 0

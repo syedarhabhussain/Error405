@@ -10,7 +10,7 @@ public class EnemyCount : MonoBehaviour
     public GameObject enemyFloor;
     public GameObject portal;
 
-    private int count;
+    public int count;
 
     // Start is called before the first frame update
     void Start()
