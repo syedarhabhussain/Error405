@@ -17,7 +17,7 @@ public class PierceOrb : MonoBehaviour
         itemScreen = GameObject.FindWithTag("Canvas").GetComponent<PickUpScreen>();
         eIndicator = transform.GetChild(0).GetChild(0).gameObject;
         UpgName = "Piercing shot";
-        desc = "Arrows \"pierce\" through the first enemy hit";
+        desc = "Arrows \"pierce\" through an extra enemy for each stack";
     }
 
     // Update is called once per frame
@@ -60,8 +60,14 @@ public class PierceOrb : MonoBehaviour
         {
             if (!playerUp.pierceShot)
             {
-                playerUp.setPierceShot(icon);
+                    playerUp.setPierceShot(icon);
+		        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel = 1;
             }
+	        else if(playerUp.pierceShot)  //else if you do have the upgrade, upgrade level goes up if below level 3
+	        {
+		        if(GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel < 3)
+			        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel += 1;
+	        }
             Destroy(gameObject);
         }
     }

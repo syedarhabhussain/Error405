@@ -52,7 +52,7 @@ public class ExplosiveArrow : MonoBehaviour
         if (enemy != null)
         {
             //if arrow hits enemy #1 or #2 generate an explosion
-            if (pierceCount != 2)
+            if (pierceCount < GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel)
             {
                 //enemy.ChangeHealth(-1);
                 Instantiate(explosion, transform.position, transform.rotation);

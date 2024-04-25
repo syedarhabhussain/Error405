@@ -57,7 +57,7 @@ public class FrostArrow : MonoBehaviour
         {
             enemy.ChangeHealth(-1, "frost");
             enemy.setFrost();
-            if (pierceCount == 0)
+            if (pierceCount < GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel)
                 pierceCount++;
             else
                 Destroy(gameObject);

@@ -20,7 +20,9 @@ public class Upgrades : MonoBehaviour
     string savedAbility;
     string savedArrow;
     public string ability;
-    public string arrow;
+    public string arrow;    
+    public int upgLevel = 1;    //level of the shot
+    public int upgLevelArrow = 1;   //level of the arrow
     [SerializeField] UpgradeInventoryUI InvUI;
     // Start is called before the first frame update
     void Start()

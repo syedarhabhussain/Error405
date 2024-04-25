@@ -17,7 +17,7 @@ public class PoiArrowOrb : MonoBehaviour
         itemScreen = GameObject.FindWithTag("Canvas").GetComponent<PickUpScreen>();
         eIndicator = transform.GetChild(0).GetChild(0).gameObject;
         UpgName = "Poison Arrow";
-        desc = "Arrows deal poison damage over time";
+        desc = "Arrows deal .5 poison damage per stack (max 3) over time";
     }
 
     // Update is called once per frame
@@ -60,8 +60,14 @@ public class PoiArrowOrb : MonoBehaviour
         {
             if (!playerUp.poiArrow)
             {
-                playerUp.setPoiArrow(icon);
+                    playerUp.setPoiArrow(icon);
+		        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow = 1;
             }
+	        else if(playerUp.poiArrow)  //else if you do have the upgrade, upgrade level goes up if below level 3
+	        {
+		        if(GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow < 3)
+			        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow += 1;
+	        }
             Destroy(gameObject);
         }
     }

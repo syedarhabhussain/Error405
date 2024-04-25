@@ -17,7 +17,7 @@ public class FrostArrowOrb : MonoBehaviour
         itemScreen = GameObject.FindWithTag("Canvas").GetComponent<PickUpScreen>();
         eIndicator = transform.GetChild(0).GetChild(0).gameObject;
         UpgName = "Frost Arrow";
-        desc = "Arrows make enemies slower";
+        desc = "Arrows make enemies slower\nby 15% per stack (max 45%)";
     }
 
     // Update is called once per frame
@@ -60,8 +60,14 @@ public class FrostArrowOrb : MonoBehaviour
         {
             if (!playerUp.froArrow)
             {
-                playerUp.setFroArrow(icon);
+                    playerUp.setFroArrow(icon);
+		        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow = 1;
             }
+	        else if(playerUp.froArrow)  //else if you do have the upgrade, upgrade level goes up if below level 3
+	        {
+		        if(GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow < 3)
+			        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow += 1;
+	        }
             Destroy(gameObject);
         }
     }

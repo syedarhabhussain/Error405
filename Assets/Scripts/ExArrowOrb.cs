@@ -17,7 +17,7 @@ public class ExArrowOrb : MonoBehaviour
         itemScreen = GameObject.FindWithTag("Canvas").GetComponent<PickUpScreen>();
         eIndicator = transform.GetChild(0).GetChild(0).gameObject;
         UpgName = "Explosive Arrow";
-        desc = "Arrows deal AOE damage";
+        desc = "Arrows deal AOE damage.Size increases per stack (max 3)";
     }
 
     // Update is called once per frame
@@ -60,8 +60,14 @@ public class ExArrowOrb : MonoBehaviour
         {
             if (!playerUp.expArrow)
             {
-                playerUp.setExpArrow(icon);
+                    playerUp.setExpArrow(icon);
+		        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow = 1;
             }
+	        else if(playerUp.expArrow)  //else if you do have the upgrade, upgrade level goes up if below level 3
+	        {
+		        if(GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow < 3)
+			        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow += 1;
+	        }
             Destroy(gameObject);
         }
     }

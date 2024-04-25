@@ -56,8 +56,12 @@ public class Projectile : MonoBehaviour
         // if hit is enemy
         if (enemy != null)
         {
-            enemy.ChangeHealth(-1, "reg");
-            if (pierceCount == 0)
+
+            /*
+                if pierce is less than upgrade level then keep going else 
+            */
+            enemy.ChangeHealth(-1, "reg");  
+            if (pierceCount < GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel)
                 pierceCount++;
             else
                 Destroy(gameObject);

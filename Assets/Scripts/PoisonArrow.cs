@@ -57,7 +57,7 @@ public class PoisonArrow : MonoBehaviour
         {
             enemy.ChangeHealth(-1, "poison");
             enemy.setPoison();
-            if (pierceCount == 0)
+            if (pierceCount < GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel)
                 pierceCount++;
             else
                 Destroy(gameObject);

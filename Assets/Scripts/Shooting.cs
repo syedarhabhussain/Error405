@@ -102,5 +102,11 @@ public class Shooting : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Instantiate(chosenArrow, bulletTransform.position, Quaternion.identity);
         audioSource.Play();
+        yield return new WaitForSeconds(0.1f);
+        if(upg.upgLevel == 3)
+        {
+            Instantiate(chosenArrow, bulletTransform.position, Quaternion.identity);
+            audioSource.Play();
+        }
     }
 }

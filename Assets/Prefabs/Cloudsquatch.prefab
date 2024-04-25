@@ -5185,7 +5185,7 @@ GameObject:
   - component: {fileID: 7401089979872113585}
   m_Layer: 8
   m_Name: Cloudsquatch
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5205,7 +5205,7 @@ Transform:
   - {fileID: 1835211696722767165}
   - {fileID: 7792820716974264819}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4882090965341971102
 SpriteRenderer:

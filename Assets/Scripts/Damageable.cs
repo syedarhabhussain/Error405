@@ -55,15 +55,19 @@ public class Damageable : MonoBehaviour
 
     public IEnumerator Poisoned()
     {
+        /*
+            
+        */
+
         SpriteRenderer rend = GetComponent<SpriteRenderer>();
         yield return new WaitForSeconds(1.5f);
-        ChangeHealth(-0.5f, "poison");
+        ChangeHealth((-0.5f * GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow), "poison");  //deal damage multiplied by upgrade level
         rend.color = Color.green;
         yield return new WaitForSeconds(0.25f);
         rend.color = Color.white;
 
         yield return new WaitForSeconds(2f);
-        ChangeHealth(-0.5f, "poison");
+        ChangeHealth((-0.5f * GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow), "poison");  //deal damage multiplied by upgrade level
         rend.color = Color.green;
         yield return new WaitForSeconds(0.25f);
         rend.color = Color.white;
@@ -86,8 +90,8 @@ public class Damageable : MonoBehaviour
         Animator anim = GetComponent<Animator>();
         rend.color = Color.cyan;
         float ogSpeed = ai.maxSpeed;
-        ai.maxSpeed /= 2;
-        anim.speed = 0.5f;
+        ai.maxSpeed *= 1 - (.15f * GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow); //1 - (.15 * upglevelarrow)
+        anim.speed = 1 - (.15f * GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow);
 
         yield return new WaitForSeconds(3f);
 

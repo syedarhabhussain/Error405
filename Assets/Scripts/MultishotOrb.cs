@@ -17,7 +17,7 @@ public class MultishotOrb : MonoBehaviour
         itemScreen = GameObject.FindWithTag("Canvas").GetComponent<PickUpScreen>();
         eIndicator = transform.GetChild(0).GetChild(0).gameObject;
         UpgName = "Multishot";
-        desc = "Fires a second arrow";
+        desc = "Fires a second arrow and a third arrow at 3 stacks";
     }
 
     // Update is called once per frame
@@ -60,8 +60,14 @@ public class MultishotOrb : MonoBehaviour
         {
             if (!playerUp.multiShot)
             {
-                playerUp.setMultiShot(icon);
+                    playerUp.setMultiShot(icon);
+		        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel = 1;
             }
+	        else if(playerUp.multiShot)  //else if you do have the upgrade, upgrade level goes up if below level 3
+	        {
+		        if(GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel < 3)
+			        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel += 1;
+	        }
             Destroy(gameObject);
         }
     }
