@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5051232226710483196}
   - component: {fileID: 3213761690714554613}
-  m_Layer: 18
+  m_Layer: 13
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2845587716714696906}
   - component: {fileID: 4704149111138452341}
   - component: {fileID: 725235885630959536}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Checkpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a406ed0bdc74f314aa6395b900c95f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossCheckpoint: 0
 --- !u!61 &725235885630959536
 BoxCollider2D:
   m_ObjectHideFlags: 0

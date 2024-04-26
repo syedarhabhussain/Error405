@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossCheckpoint : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,11 +13,13 @@ public class BossCheckpoint : MonoBehaviour
             Debug.Log("deleted from checkpoint");
             Destroy(gameObject);
         } 
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
+
 }

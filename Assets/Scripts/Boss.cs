@@ -118,7 +118,8 @@ public class Boss : MonoBehaviour
     }
     void SpawnMobs()
     {
-        Instantiate(mobs[Random.Range(0,mobs.Count)], new Vector2(Random.Range(149, 173), Random.Range(-56, -34)), Quaternion.identity);
+        GameObject mob = Instantiate(mobs[Random.Range(0,mobs.Count)], new Vector2(Random.Range(149, 173), Random.Range(-56, -34)), Quaternion.identity);
+        mob.GetComponent<BossCheckpoint>().enabled = false;
     }
     public void cancelSpawns()
     {
