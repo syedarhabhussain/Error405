@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CheckpointTrigger : MonoBehaviour
 {
+    [SerializeField] bool bossCheckpoint = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,21 @@ public class CheckpointTrigger : MonoBehaviour
         if (player != null)
         {
             player.savedCheckpoint = transform.position;
-            Debug.Log("CheckpointTrigger POP");
+
+            if(bossCheckpoint)
+            {   
+                PlayerPrefs.SetInt("bossCheck", 1);
+                PlayerPrefs.SetFloat("bossX", transform.position.x);
+                PlayerPrefs.SetFloat("bossY", transform.position.y);
+                
+                //set an x and y for the player based on the checkpoint location and make that their spawn point
+            }
+            else
+            {
+                PlayerPrefs.SetInt("bossCheck", 0);
+            }
+
+            Debug.Log("CheckpointTrigger");
         }
     }
 }

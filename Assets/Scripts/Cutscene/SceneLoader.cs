@@ -12,6 +12,7 @@ public class SceneLoader : MonoBehaviour
 
     void OnEnable()
     {
+        PlayerPrefs.SetInt("bossCheck", 0);
         SceneManager.LoadScene("Start Menu", LoadSceneMode.Single);
     }
 }

@@ -59,6 +59,12 @@ public class PlayerController : MonoBehaviour
         moveSpeed = walkSpeed;
         savedHealth = PlayerPrefs.GetInt("Health", 6);
         currentHealth = savedHealth;
+
+
+        if(PlayerPrefs.GetInt("bossCheck") == 1)
+        {
+            transform.position = new Vector2(PlayerPrefs.GetFloat("bossX"), PlayerPrefs.GetFloat("bossY"));
+        }
     }
 
     // Update is called once per frame

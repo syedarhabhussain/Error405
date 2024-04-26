@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 5602770112824552045}
   - component: {fileID: 1769899588777941223}
   - component: {fileID: 2964480638453420964}
+  - component: {fileID: 5410857418698454614}
   m_Layer: 8
   m_Name: ChargingSlime
   m_TagString: Untagged
@@ -447,7 +448,7 @@ Transform:
   - {fileID: 9137839553837480822}
   - {fileID: 3855233942485575935}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4560217707713211109
 SpriteRenderer:
@@ -755,6 +756,18 @@ MonoBehaviour:
   detectRange: 7
   puddle: {fileID: 6683898563664871412, guid: e47cdca5d8f199b4eaa481dfaff27b8c, type: 3}
   puddleCD: 0.2
+--- !u!114 &5410857418698454614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5066882389938656957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9453dcc011b21478cda062f55fee30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9085522905104274374
 GameObject:
   m_ObjectHideFlags: 0

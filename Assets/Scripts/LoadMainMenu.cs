@@ -18,6 +18,7 @@ public class LoadMainMenu : MonoBehaviour
     {
         // Play animation
         transition.SetTrigger("Start");
+        PlayerPrefs.SetInt("bossCheck", 0);
 
         // Wait
         yield return new WaitForSeconds(transitionTime);

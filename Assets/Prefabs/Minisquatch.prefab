@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7610228329846988391}
   - component: {fileID: 786200946986060560}
   - component: {fileID: 81194121469077919}
+  - component: {fileID: 5080188125461410918}
   m_Layer: 8
   m_Name: Minisquatch
   m_TagString: Enemy
@@ -423,6 +424,19 @@ MonoBehaviour:
   raycastOffset: {x: 0, y: 0, z: 0}
   useGraphRaycasting: 0
   quality: 1
+--- !u!114 &5080188125461410918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3275944213894841351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9453dcc011b21478cda062f55fee30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossCheckpoint: 0
 --- !u!1 &3935474293381539430
 GameObject:
   m_ObjectHideFlags: 0

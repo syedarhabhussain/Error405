@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 2498101215128283426}
   - component: {fileID: 1173066583526388306}
   - component: {fileID: 583618726430295598}
+  - component: {fileID: 8185534568321290451}
   m_Layer: 8
   m_Name: Pixie
   m_TagString: Enemy
@@ -224,6 +225,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a8b6c721e62b83745be29070d1696729, type: 2}
   - {fileID: 11400000, guid: 6a4f6f71487f7604184204377053a8a1, type: 2}
   - {fileID: 11400000, guid: e3b13eeb94844d94d840045967ae3925, type: 2}
+  - {fileID: 11400000, guid: 152e793f8e54a4ee99c77893c04ac14f, type: 2}
   dropForce: 50
 --- !u!114 &4238138662058594481
 MonoBehaviour:
@@ -392,6 +394,19 @@ MonoBehaviour:
   raycastOffset: {x: 0, y: 0, z: 0}
   useGraphRaycasting: 0
   quality: 1
+--- !u!114 &8185534568321290451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387816454469277463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9453dcc011b21478cda062f55fee30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossCheckpoint: 0
 --- !u!1 &2519522130136283094
 GameObject:
   m_ObjectHideFlags: 0

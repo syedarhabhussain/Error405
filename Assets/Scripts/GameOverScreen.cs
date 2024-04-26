@@ -19,6 +19,7 @@ public class GameOverScreen : MonoBehaviour
         PlayerPrefs.DeleteKey("Health");
         PlayerPrefs.DeleteKey("Arrow");
         PlayerPrefs.DeleteKey("Ability");
+        PlayerPrefs.SetInt("bossCheck", 0);
         SceneManager.LoadScene(2);
     }
 

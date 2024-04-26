@@ -26,6 +26,7 @@ public class Portal : MonoBehaviour
         
         if (player != null && enemies.transform.childCount == 0)
         {
+            PlayerPrefs.SetInt("bossCheck", 0);
             Upgrades upg = player.GetComponent<Upgrades>();
             PlayerPrefs.SetString("Ability", upg.ability);
             PlayerPrefs.SetString("Arrow", upg.arrow);

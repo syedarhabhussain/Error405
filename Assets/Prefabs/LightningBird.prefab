@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 97710787820596236}
   - component: {fileID: 60633092400867292}
   - component: {fileID: 1975630595554801224}
+  - component: {fileID: 1497112163229137913}
   m_Layer: 8
   m_Name: LightningBird
   m_TagString: Enemy
@@ -356,6 +357,19 @@ MonoBehaviour:
   raycastOffset: {x: 0, y: 0, z: 0}
   useGraphRaycasting: 0
   quality: 1
+--- !u!114 &1497112163229137913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048741703596839842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9453dcc011b21478cda062f55fee30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossCheckpoint: 0
 --- !u!1 &2916280512793361581
 GameObject:
   m_ObjectHideFlags: 0

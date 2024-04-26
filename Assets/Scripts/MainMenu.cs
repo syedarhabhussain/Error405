@@ -11,16 +11,19 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        PlayerPrefs.SetInt("bossCheck", 0);
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void PlayFloorOne()
     {
+        PlayerPrefs.SetInt("bossCheck", 0);
         StartCoroutine(LoadLevel(2));
     }
 
     public void PlayFloorTwo()
     {
+        PlayerPrefs.SetInt("bossCheck", 0);
         StartCoroutine(LoadLevel(3));
     }
 
