@@ -13,6 +13,7 @@ public class Mimic : MonoBehaviour
     public int coinAmt = 30;
     public List<GameObject> minions;
     public bool spawn1, spawn2;
+    public GameObject spikes1, spikes2;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,9 @@ public class Mimic : MonoBehaviour
     {
         if (dmg.currentHealth <= 0)
         {
-            Destroy(gameObject);
+            Destroy(gameObject); 
+            spikes1.GetComponent<Animator>().SetBool("Up", false);
+            spikes2.GetComponent<Animator>().SetBool("Up", false);
         }
         //Spawn after a third of health is missing
         if(dmg.currentHealth <= dmg.maxHealth / 3 * 2 && !spawn1)
