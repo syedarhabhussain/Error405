@@ -22,7 +22,7 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemies.transform.childCount <= 1)
+        if (enemies.transform.childCount < 1)
         {
             open = true;
             Destroy(closedsign);
