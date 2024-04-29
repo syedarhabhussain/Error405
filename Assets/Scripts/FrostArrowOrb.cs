@@ -60,7 +60,6 @@ public class FrostArrowOrb : MonoBehaviour
         {
             if (!playerUp.froArrow)
             {
-                    playerUp.setFroArrow(icon);
 		        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow = 1;
             }
 	        else if(playerUp.froArrow)  //else if you do have the upgrade, upgrade level goes up if below level 3
@@ -68,6 +67,7 @@ public class FrostArrowOrb : MonoBehaviour
 		        if(GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow < 3)
 			        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevelArrow += 1;
 	        }
+            playerUp.setFroArrow(icon);
             Destroy(gameObject);
         }
     }

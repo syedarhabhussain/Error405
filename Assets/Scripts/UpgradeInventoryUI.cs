@@ -12,7 +12,7 @@ public class UpgradeInventoryUI : MonoBehaviour
     private GameObject icon2;
    // private GameObject icon3;
     private bool hasIcon2;
-    private GameObject timerText1, timerText2;
+    private GameObject timerText1, timerText2, arrowLvText, abilityLvText;
     private float timer1, timer2 = 0;
     public Sprite emptyIcon;
 
@@ -24,14 +24,40 @@ public class UpgradeInventoryUI : MonoBehaviour
         icon2 = transform.GetChild(1).gameObject;
         timerText1 = icon1.transform.GetChild(0).gameObject;
         timerText2 = icon2.transform.GetChild(0).gameObject;
+        arrowLvText = icon1.transform.GetChild(1).gameObject;
+        abilityLvText = icon2.transform.GetChild(1).gameObject;
         // icon3 = transform.GetChild(2).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(upg.arrow == "empty")
+        {
+            timerText1.SetActive(false);
+            arrowLvText.SetActive(false);
+        }
+        else
+        {
+            timerText1.SetActive(true);
+            arrowLvText.SetActive(true);
+        }
+
+        if (upg.ability == "empty")
+        {
+            timerText2.SetActive(false);
+            abilityLvText.SetActive(false);
+        }
+        else
+        {
+            timerText2.SetActive(true);
+            abilityLvText.SetActive(true);
+        }
+
         timerText1.GetComponent<TMP_Text>().text = Mathf.CeilToInt(timer1).ToString();
         timerText2.GetComponent<TMP_Text>().text = Mathf.CeilToInt(timer2).ToString();
+        arrowLvText.GetComponent<TMP_Text>().text = "Lv." + upg.upgLevelArrow;
+        abilityLvText.GetComponent<TMP_Text>().text = "Lv." + upg.upgLevel;
 
         if (timer1 > 0 )
         {
@@ -70,6 +96,7 @@ public class UpgradeInventoryUI : MonoBehaviour
     {
         icon1.GetComponent<Image>().sprite = icon;
         timer1 = 60;
+        Debug.Log(timer1);
     }
 
     public void UpdateIcon2(Sprite icon)

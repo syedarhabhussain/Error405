@@ -60,7 +60,6 @@ public class PierceOrb : MonoBehaviour
         {
             if (!playerUp.pierceShot)
             {
-                    playerUp.setPierceShot(icon);
 		        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel = 1;
             }
 	        else if(playerUp.pierceShot)  //else if you do have the upgrade, upgrade level goes up if below level 3
@@ -68,6 +67,7 @@ public class PierceOrb : MonoBehaviour
 		        if(GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel < 3)
 			        GameObject.FindWithTag("Player").GetComponent<Upgrades>().upgLevel += 1;
 	        }
+            playerUp.setPierceShot(icon);
             Destroy(gameObject);
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Damageable : MonoBehaviour
 {
@@ -39,9 +40,18 @@ public class Damageable : MonoBehaviour
             ai.canMove = true;
         if ((poiRes && damType == "poison") || (expRes && damType == "explosion") || (froRes && damType == "frost")) { 
             amt /= 2;
+           // gameObject.transform.GetChild(1).GetComponent<TMP_Text>().colors32.a = 1;
+            StartCoroutine(resistFade(gameObject.transform.GetChild(0).GetChild(1).gameObject));
         }
         currentHealth = Mathf.Clamp(currentHealth + amt, 0, maxHealth);
         healthbar.UpdateHealthbar(currentHealth, maxHealth);
+    }
+
+    private IEnumerator resistFade(GameObject text)
+    {
+        text.SetActive(true);
+        yield return new WaitForSeconds(0.25f);
+        text.SetActive(false);
     }
 
     public void setPoison()
