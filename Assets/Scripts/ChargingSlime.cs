@@ -15,7 +15,7 @@ public class ChargingSlime : MonoBehaviour
     bool attack;
     Damageable dmg;
     private Pathfinding.AIBase aipath;
-    [SerializeField] int detectRange;
+    [SerializeField] public int detectRange;
 
     [SerializeField] GameObject puddle;
     [SerializeField] float puddleCD = 0.5f;
