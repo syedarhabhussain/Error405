@@ -15,7 +15,7 @@ public class BasicEnemy : MonoBehaviour
     bool attack;
     Damageable dmg;
     private Pathfinding.AIBase aipath;
-    [SerializeField] int detectRange;
+    [SerializeField] public int detectRange;
 
 
     // Start is called before the first frame update

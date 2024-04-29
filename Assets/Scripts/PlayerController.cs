@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     float moveY;
     public float walkSpeed = 4f;
     public float runSpeed = 6f;
-    float stamina = 100f;
+    [SerializeField] float stamina = 100f;
     float maxStamina = 100f;
     public bool rolling;
     public bool invRolling;
