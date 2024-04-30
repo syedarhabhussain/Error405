@@ -13,7 +13,7 @@ public class EnemyPointer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateArray();
+        
         rend = GetComponentInChildren<SpriteRenderer>();
         //rend.enabled = true;
     }   
@@ -21,17 +21,33 @@ public class EnemyPointer : MonoBehaviour
     // Update is called once per frame      
     void Update()
     {
-        transform.right = (GetClosestEnemy(enemyTransform).position - this.transform.position).normalized;
-        
-        if(GameObject.FindGameObjectWithTag("Canvas").GetComponent<EnemyCount>().count <= 0) // if enemy count = 0
+        UpdateArray();
+        if(GameObject.FindGameObjectWithTag("Canvas").GetComponent<EnemyCount>() != null)
         {
-            rend.enabled = false;
+            if(GameObject.FindGameObjectWithTag("Canvas").GetComponent<EnemyCount>().count <= 0) // if enemy count = 0
+            {
+                rend.enabled = false;
+            }
+            else
+            {
+                transform.right = (GetClosestEnemy(enemyTransform).position - this.transform.position).normalized;
+                rend.enabled = true;
+            }
         }
         else
         {
-            rend.enabled = true;
+            if(GameObject.FindGameObjectWithTag("Canvas").GetComponent<IslandsCounter>().count <= 0 || allEnemies.Length == 0) // for slime abyss level bc it has a diff enemy count script
+            {
+                rend.enabled = false;
+            }
+            else
+            {
+                transform.right = (GetClosestEnemy(enemyTransform).position - this.transform.position).normalized;
+                rend.enabled = true;
+            }
         }
-        
+            
+
     }
 
 

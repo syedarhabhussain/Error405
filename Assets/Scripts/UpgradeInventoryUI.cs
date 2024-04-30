@@ -96,7 +96,6 @@ public class UpgradeInventoryUI : MonoBehaviour
     {
         icon1.GetComponent<Image>().sprite = icon;
         timer1 = 60;
-        Debug.Log(timer1);
     }
 
     public void UpdateIcon2(Sprite icon)

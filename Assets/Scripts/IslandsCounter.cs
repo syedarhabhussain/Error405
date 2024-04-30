@@ -13,7 +13,7 @@ public class IslandsCounter : MonoBehaviour
     public GameObject passthru;
 
     private bool islandDone;
-    private int count;
+    public int count;
     private int iterator = 0;
 
     // Start is called before the first frame update
