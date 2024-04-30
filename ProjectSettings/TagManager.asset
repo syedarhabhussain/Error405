@@ -12,6 +12,7 @@ TagManager:
   - Pillar
   - Shield
   - BulletPool
+  - NoSpawn
   layers:
   - Default
   - TransparentFX
@@ -34,7 +35,7 @@ TagManager:
   - Boss
   - SpikeWall
   - PlayerFeet
-  - 
+  - NoSpawn
   - 
   - 
   - 

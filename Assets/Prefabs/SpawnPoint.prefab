@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4624322191935689287}
   - component: {fileID: 7455385460061891628}
   - component: {fileID: 6093733764225639160}
+  - component: {fileID: 7013406449643462049}
   m_Layer: 6
   m_Name: SpawnPoint
-  m_TagString: Untagged
+  m_TagString: NoSpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
   difficultyChange: 3
   startingDifficultyTier: 0
   miniBossSpawn: 0
+  outOfBounds: 0
   mobs:
   - {fileID: 4803168749450077603, guid: 03cf1edbc810fbf40845de15e71b5201, type: 3}
   - {fileID: 4803168749450077603, guid: 03cf1edbc810fbf40845de15e71b5201, type: 3}
@@ -125,3 +127,48 @@ MonoBehaviour:
   - {fileID: 2843221231963570901, guid: 450ec92e2b70acb43bc7bd1614537725, type: 3}
   - {fileID: 5066882389938656957, guid: 9c13ce6beff9a5847b7f5df1a42c54e2, type: 3}
   - {fileID: 3496661103413193697, guid: 61e225bc79735f04d8775a399bbe5236, type: 3}
+--- !u!61 &7013406449643462049
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922055907383656164}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 2097142
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4}
+  m_EdgeRadius: 0

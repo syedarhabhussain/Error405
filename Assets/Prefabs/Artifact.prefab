@@ -145,7 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c901ca2c8385aec44be674406039eab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenNum: 0
+  screenNum: 7
+  interactRange: 1
 --- !u!114 &1195077357426339993
 MonoBehaviour:
   m_ObjectHideFlags: 0

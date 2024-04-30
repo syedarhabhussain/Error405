@@ -19,6 +19,7 @@ public class SurvivalSpawner : MonoBehaviour
     [SerializeField] int difficultyChange;  //what number should the difficulty go up on
     [SerializeField] int startingDifficultyTier = 0;    //what difficulty tier should the spawner start
     [SerializeField] bool miniBossSpawn;
+    [SerializeField] bool outOfBounds;
 
 
     public List<GameObject> mobs;
@@ -42,16 +43,19 @@ public class SurvivalSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         currentTime -= Time.deltaTime;
 
         if(difficultyTier >= startingDifficultyTier)
         {
             if(currentTime <= 0.0f)
             {
-                SpawnMobs();
-                timesSpawned += 1;
-                currentTime = timeTillSpawn;
-
+                if(!outOfBounds)
+                {
+                    SpawnMobs();
+                    timesSpawned += 1;
+                    currentTime = timeTillSpawn;
+                }
 
                 if((timesSpawned % difficultyChange) == 0)
                 {
@@ -101,6 +105,15 @@ public class SurvivalSpawner : MonoBehaviour
                     timeTillSpawn += timeChange;
             }
         }
+
+        if(transform.position.y < -122.0f || transform.position.y > -41.0f || transform.position.x < -115.0f || transform.position.x > 104.0f)
+        {
+            outOfBounds = true;
+        }
+        else
+        {
+            outOfBounds = false;
+        }
     }
 
     void SpawnMobs()
@@ -146,8 +159,6 @@ public class SurvivalSpawner : MonoBehaviour
                 mob.GetComponent<LightningBirdEnemy>().detectRange = 100;
             if(mob.GetComponent<CloudsquatchEnemy>() != null)
                 mob.GetComponent<CloudsquatchEnemy>().detectRange = 100;
-            
-            
         }
     }
 }

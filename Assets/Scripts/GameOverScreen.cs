@@ -28,4 +28,10 @@ public class GameOverScreen : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //Debug.Log(SceneManage.GetActiveScene());
     }
+
+    public void MainMenu()
+    {
+        PlayerPrefs.SetInt("bossCheck", 0);
+        SceneManager.LoadSceneAsync(1);
+    }
 }

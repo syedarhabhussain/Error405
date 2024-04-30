@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed = 4f;
     public float runSpeed = 6f;
     [SerializeField] float stamina = 100f;
-    float maxStamina = 100f;
+    [SerializeField] float maxStamina = 100f;
     public bool rolling;
     public bool invRolling;
     public bool slowed;

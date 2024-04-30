@@ -27,6 +27,12 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(LoadLevel(3));
     }
 
+    public void PlaySurvival()
+    {
+        PlayerPrefs.SetInt("bossCheck", 0);
+        StartCoroutine(LoadLevel(5));
+    }
+
     IEnumerator LoadLevel(int levelIndex)
     {
         // Play animation
